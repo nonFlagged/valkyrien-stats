@@ -18,7 +18,7 @@ jobs:
           if ! git diff --quiet -- people.json || [ -n "$(git status --porcelain people.json)" ]; then
             git config user.name "valkyrien-bot"
             git config user.email "valkyrien-bot@users.noreply.github.com"
-            git add people.json
+            git add people.json avatars
             git commit -m "Refresh avatars"
             git push
           fi
